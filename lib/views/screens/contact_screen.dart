@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+
+class ContactScreen extends StatelessWidget {
+  const ContactScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('ទំនាក់ទំនង'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(16.0),
+        children: const [
+          ListTile(
+            leading: Icon(Icons.email, color: Colors.deepPurple),
+            title: Text('អ៊ីមែល'),
+            subtitle: Text('info@example.com'),
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.phone, color: Colors.deepPurple),
+            title: Text('លេខទូរស័ព្ទ'),
+            subtitle: Text('+85585421904'),
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.location_on, color: Colors.deepPurple),
+            title: Text('អាសយដ្ឋាន'),
+            subtitle: Text('រាជធានីភ្នំពេញ, ប្រទេសកម្ពុជា'),
+          ),
+        ],
+      ),
+    );
+  }
+}
